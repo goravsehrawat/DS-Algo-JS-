@@ -8,7 +8,9 @@ const parenthesesMap = {
   "]": "[",
   ")": "("
 };
+//Add aditional expressions if required 
 const parenthesesPossibleValue = ["{", "(", "["];
+
 const matchParentheses = expression => {
   const expressionArray = expression.split("");
   const stack = [];
@@ -27,3 +29,8 @@ const matchParentheses = expression => {
   }
   return stack.length === 0;
 };
+
+
+Analysis :-
+1.Space complexity - O(logk) //where k is the number of valid parentheses expressions 
+2.Time complexity - O(n) 
